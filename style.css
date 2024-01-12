@@ -3,6 +3,10 @@
     to { opacity: 1; }
 }
 
+.fadeIn {
+    animation: fadeIn 1s ease-in-out;
+}
+
 .gallery-grid {
     /* Use column-count to create a masonry effect */
     -moz-column-count: 6;
