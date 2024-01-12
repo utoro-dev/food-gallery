@@ -1,3 +1,8 @@
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
 .gallery-grid {
     /* Use column-count to create a masonry effect */
     -moz-column-count: 6;
@@ -9,6 +14,7 @@
 }
 
 .gallery-grid img {
+    animation: fadeIn 1s ease-in-out;
     width: 100%;
     height: auto;
     border-radius: 8px;
