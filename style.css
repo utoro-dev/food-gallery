@@ -3,8 +3,17 @@
     to { opacity: 1; }
 }
 
+@keyframes flash {
+    0%, 50%, 100% { opacity: 1; }
+    25%, 75% { opacity: 0; }
+}
+
 .fadeIn {
     animation: fadeIn 1s ease-in-out;
+}
+
+.flash {
+    animation: flash 1s ease-in-out; /* Run for 1 second, ease in and out, 2 times */
 }
 
 .gallery-grid {
@@ -21,8 +30,8 @@
     animation: fadeIn 1s ease-in-out;
     width: 100%;
     height: auto;
-    border-radius: 8px;
-    margin-bottom: 10px; /* Add space between the images */
+    border-radius: 10px;
+    margin-bottom: 0px; /* Add space between the images */
     break-inside: avoid; /* Prevents breaking the image between columns */
     display: block;
 }
@@ -84,7 +93,8 @@
     transition: opacity 0.3s; /* Smooth transition for the hover effect */
     text-align: center;
     box-sizing: border-box; /* This ensures padding is included in the element's total width and height */
-    overflow: hidden; /* Prevent content from spilling outside the box */
+    overflow: ellipsis; /* Prevent content from spilling outside the box */
+    text-overflow: ellipsis;
 }
 
 .image-container:hover .comment {

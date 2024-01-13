@@ -29,7 +29,7 @@ function createImageElement(id, url, comment) {
     }
 
     const container = document.createElement('div');
-    container.className = 'image-container flash'; // Add 'fadeIn' class here
+    container.className = 'image-container fadeIn'; // Add 'fadeIn' class here
     container.setAttribute('data-id', id);
 
     const img = document.createElement('img');
@@ -60,4 +60,6 @@ function setupHoverEffect() {
 }
 
 setupHoverEffect();
+
+
 
